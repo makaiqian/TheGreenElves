@@ -25,7 +25,7 @@
   <div class="header">
     <div class="container-wrap relative-wrap">
       <h1 class="header-title">麻凯倩's blog ❤前端</h1>
-      <p class="describe">寄君一曲，不问曲终人聚散。</p>
+      <p class="header-describe">寄君一曲，不问曲终人聚散。</p>
       <div class="music clearfix">
         <audio id="js-music" autoplay="autoplay" loop="loop">
           <source src="music/music1.mp3">
@@ -59,8 +59,10 @@
   <div class="slider">
     <div class="container-wrap">
       <div class="slider-img relative-wrap" id="js-slider-img">
-        <img src="images/MaKay1.jpg">
-        <div class="slider-btn btn" id="js-slider-btn">About My Blog</div>
+        <img src="images/mk.jpg">
+        <a class="slider-btn btn">
+          <span class="slider-btn-text" id="js-slider-btn">About My Blog</span>
+        </a>
         <div class="slider-shadow" id="js-slider-shadow">
           <div class="slider-title">About My Blog</div>
           <hr>
@@ -151,8 +153,6 @@
           <!-- 代码块 -->
           <pre>
             <code>
-    hello world !
-    I'm MaKay .
             </code>
           </pre>
           <!-- 代码块 end -->
@@ -214,7 +214,7 @@
           <!-- 表单 end -->
 
           <!-- 按钮 -->
-          <button>按钮<botton>
+          <button>按钮</button>
           <!-- 按钮 end -->
         </div>
         <!-- article-content end -->
@@ -283,87 +283,18 @@
         <div class="article-content">
           <pre>
             <code>
-  /* CSS */
-  @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    body:first-of-type pre::after {
-      content: 'highlight: ' attr(class);
-    }
-    body {
-      background: linear-gradient(45deg, blue, red);
-    }
-  }
-
-  @import url('print.css');
-  @page:right {
-   margin: 1cm 2cm 1.3cm 4cm;
-  }
-
-  @font-face {
-    font-family: Chunkfive; src: url('Chunkfive.otf');
-  }
-
-  div.text,
-  #content,
-  li[lang=ru] {
-    font: Tahoma, Chunkfive, sans-serif;
-    background: url('hatch.png') /* wtf? */;  color: #F0F0F0 !important;
-    width: 100%;
-  }
-  /* CSS end */
             </code>
           </pre>
 
           <pre>
             <code>
-  /* JS */
 
-  function $initHighlight(block, flags) {
-    try {
-      if (block.className.search(/\bno\-highlight\b/) != -1)
-        return processBlock(block.function, true, 0x0F) + ' class=""';
-    } catch (e) {
-      /* handle exception */
-      var e4x =
-          <div>Example
-              <p>1234</p></div>;
-    }
-    for (var i = 0 / 2; i < classes.length; i++) { // "0 / 2" should not be parsed as regexp
-      if (checkCondition(classes[i]) === undefined)
-        return /\d+[\s/]/g;
-    }
-    console.log(Array.every(classes, Boolean));
-  }
-
-  /* JS end */
             </code>
           </pre>
 
           <pre>
             <code>
-  /* Markdown */
 
-  # hello world
-
-  you can write text [with links](http://example.com) inline or [link references][1].
-
-  * one _thing_ has *em*phasis
-  * two __things__ are **bold**
-
-  ---
-
-  hello world
-  ===========
-
-  > markdown is so cool
-
-      so are code segments
-
-  1. one thing (yeah!)
-  2. two thing `i can write code`, and `more` wipee!
-
-  [1]: http://example.com
-
-  /* Markdown end */
             </code>
           </pre>
         </div>
@@ -384,7 +315,7 @@
 
   <!-- sidebar -->
   <div class="sidebar">
-    <div class="sidebar-header relative-wrap btn"></div>
+    <a class="sidebar-header relative-wrap btn"></a>
     <div class="sidebar-content">
 
       <!-- works -->

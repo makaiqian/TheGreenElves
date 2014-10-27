@@ -14,13 +14,22 @@ var $sidebarContent = $('.sidebar-content');
 var currentSrcIndex = 0;
 
 /* slider文字说明 */
+// 鼠标移入/移出——>提示显示/消失
 $sliderImg.on({
   mouseenter: function() {
-    $sliderBtn.css('width', '120px').toggle(600);
+    $sliderBtn.toggle(600);
   },
   mouseleave: function() {
     $sliderBtn.toggle(600);
   }
+});
+// 点击提示出现详情
+$sliderBtn.on('click', function() {
+  $sliderShadow.show(600)
+                .delay(1000)
+                .on('click', function() {
+                  $(this).hide(600);
+                });
 });
 /* slider文字说明 end */
 
